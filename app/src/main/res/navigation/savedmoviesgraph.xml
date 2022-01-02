@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/savedmoviesgraph"
+    app:startDestination="@id/savedMovies">
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.infinity.navigationsample.ui.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.infinity.navigationsample.models.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedMovies"
+        android:name="com.infinity.navigationsample.ui.SavedMovies"
+        android:label="SavedMovies" >
+        <action
+            android:id="@+id/action_savedMovies_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+</navigation>
